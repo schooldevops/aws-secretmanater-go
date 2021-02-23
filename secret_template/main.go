@@ -70,10 +70,10 @@ func keyMapping(secretMap map[string]interface{}, configMap map[string]string) m
 func makingTemplate(a string, b map[string]interface{}) string {
 	tmpl := template.Must(template.New("").Parse(a))
 	buf := &bytes.Buffer{}
-        err := tmpl.Execute(buf, b)
+	err := tmpl.Execute(buf, b)
 	if err != nil {
 		panic(err)
-        }
+	}
 	s := buf.String()
 	return s
 }
